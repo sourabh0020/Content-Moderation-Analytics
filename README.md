@@ -115,7 +115,7 @@ Every cleaning decision was **validated against the data first**, not assumed:
 - ✅ **Duplicate checks** → zero duplicate `ticket_id` / `content_id`; one duplicate moderator *name* found (unique IDs though — valid real-world case, not an error).
 - 🗓️ **Feature engineering** → derived `year`, `quarter`, `month`, `month_name`, `day_name`, `week`, `hour`, `date` from timestamps for fast Power BI slicing on a 1M-row table.
 
-📓 Full notebook: [`Content_moderation_data_analysis.ipynb`](./Content_moderation_data_analysis.ipynb)
+📓 Full notebook: [`Content_moderation_data_analysis.ipynb`](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Jupyter_Notebok/Content_moderation_data_analysis.ipynb)
 
 ---
 
@@ -132,7 +132,7 @@ CREATE INDEX IX_Fact_Region           ON fact_content_moderation(region);
 
 All 8 business questions were answered with dedicated aggregate queries joining the fact table to the relevant dimensions.
 
-📄 Full queries: [`Content_moderation_Analysis_Query.sql`](./Content_moderation_Analysis_Query.sql)
+📄 Full queries: [`Content_moderation_Analysis_Query.sql`](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/SQL/Content_moderation_Analysis_Query.sql)
 
 ---
 
@@ -143,28 +143,28 @@ A 4-page Power BI report built for **three different audiences**, plus a drill-t
 ### 1️⃣ Overview — Leadership View
 KPIs, category/severity breakdown, monthly trend, action-taken mix.
 
-![Overview Dashboard](./assets/01_overview_dashboard.jpg)
+![Overview Dashboard](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Executive%20Overview.png)
 
 > **993K** total tickets · **40.12s** avg handling time · **83.45%** accuracy · **8.02%** appeal rate · **27.94%** AI automation · **10.08%** Critical cases
 
 ### 2️⃣ Moderators Overview — Workforce / QA Manager View
 Individual moderator workload, speed, and accuracy.
 
-![Moderators Overview](./assets/02_moderators_overview.jpg)
+![Moderators Overview](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Moderator%20performance.png)
 
 > **500** moderators · **1.43K** avg tickets/moderator · sortable table with conditional-format accuracy
 
 ### 3️⃣ Team & Operations — Team Lead / Ops View
 Team-lead accuracy heatmap, regional workload, shift comparison.
 
-![Team & Operations](./assets/03_team_operations.jpg)
+![Team & Operations](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Team%20and%20operations.png)
 
 > **25** teams · **5** regions · Team Lead × Severity accuracy heatmap
 
 ### 4️⃣ Drill-Through — Individual Moderator Detail
 Right-click any moderator on Page 2 to drill into their personal trend, category-level accuracy, and severity breakdown by month.
 
-<img src="./assets/04_drillthrough_moderator.png" width="600" />
+<img src="https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Drill%20through%20screenshot.png" width="600" />
 
 ---
 
