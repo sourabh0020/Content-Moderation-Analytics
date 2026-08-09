@@ -138,64 +138,144 @@ All 8 business questions were answered with dedicated aggregate queries joining 
 
 ## 📊 Dashboard
 
-A 4-page Power BI report built for **three different audiences**, plus a drill-through page for individual moderator investigation.
+A 4-page Power BI report designed to provide a complete view of **Trust & Safety content moderation operations**, covering executive performance, moderator productivity, individual moderator investigation, and policy/quality risk.
 
-### 1️⃣ Overview — Leadership View
-KPIs, category/severity breakdown, monthly trend, action-taken mix.
+### 1️⃣ Executive Overview — Leadership View
+
+Provides a high-level view of moderation volume, workforce mix, quality, handling efficiency, and escalation trends.
+
+Key metrics include:
+
+- Total Cases
+- Human Cases
+- Automation Cases
+- Accuracy
+- Average Handling Time (AHT)
+- Escalation Rate
+- Cases by Severity
+- Cases by Policy Category
+- Monthly Cases Trend
 
 ![Overview Dashboard](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Executive%20Dashboard.png)
 
-> **993K** total tickets · **40.12s** avg handling time · **83.45%** accuracy · **8.02%** appeal rate · **27.94%** AI automation · **10.08%** Critical cases
+> **993K** total cases · **716K** human cases · **277K** automation cases · **83.4%** accuracy · **55.7 sec** avg handling time · **15.3%** escalation rate
 
-### 2️⃣ Moderators Overview — Workforce / QA Manager View
-Individual moderator workload, speed, and accuracy.
+### 2️⃣ Moderator Performance — Workforce & QA View
 
-![Moderators Overview](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Moderator%20performance.png)
+Analyzes moderator-level productivity and quality to identify high performers, performance gaps, and potential coaching priorities.
 
-> **500** moderators · **1.43K** avg tickets/moderator · sortable table with conditional-format accuracy
+Key analysis includes:
 
-### 3️⃣ Team & Operations — Team Lead / Ops View
-Team-lead accuracy heatmap, regional workload, shift comparison.
+- Total Cases
+- Total Moderators
+- Cases per Moderator
+- Accuracy
+- Average AHT
+- Top 15 Moderators by Cases
+- Moderator Accuracy vs AHT
+- Cases by Shift
+- Lowest-performing Team Leads by Accuracy
+- Moderator Performance Details
 
-![Team & Operations](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Team%20and%20operations.png)
+![Moderators Overview](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Mods%20Performance.png)
 
-> **25** teams · **5** regions · Team Lead × Severity accuracy heatmap
+> **716K** human-moderated cases · **500** moderators · **1.43K** cases/moderator · **83.4%** accuracy · **55.7 sec** avg handling time
 
-### 4️⃣ Drill-Through — Individual Moderator Detail
-Right-click any moderator on Page 2 to drill into their personal trend, category-level accuracy, and severity breakdown by month.
+### 3️⃣ Quality, Risk & Policy — QA & Policy View
 
-<img src="https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Drill%20through%20screenshot.png" width="600" />
+Provides a policy-level view of moderation quality, appeals, overturns, escalation, audits, and severity risk.
+
+Key metrics and analysis include:
+
+- Accuracy
+- Total Appeals
+- Appeal Rate
+- Appeal Overturn Rate
+- Escalation Rate
+- Audit Coverage
+- Accuracy by Policy Category
+- Appeal Cases by Policy Category
+- Action Distribution by Policy Category
+- Cases by Severity
+- Appeal Overturn Rate by Policy Category
+- Policy Appeal & Overturn Details
+
+
+![Team & Operations](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Quality%2Crisk%20perfromance.png)
+
+> **83.45%** accuracy · **80K** appeals · **8.02%** appeal rate · **17.99%** appeal overturn rate · **15.3%** escalation rate · **1.44%** audit coverage
+
+### 4️⃣ Moderator Detail Analysis — Individual Investigation
+
+A drill-through page designed for investigating the performance of an individual moderator.
+
+Right-click a moderator from the **Moderator Performance** page to analyze:
+
+- Total Cases
+- Accuracy
+- Average AHT
+- Appeal Rate
+- Overturn Rate
+- Critical Cases
+- Monthly Cases Trend
+- Accuracy by Violation Category
+- Cases by Severity Level and Month
+
+(https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Mod%20detailed%20drill%20through%20page.png)
 
 ---
 
 ## 🔑 Key Findings
 
-- 🤖 **Automation headroom** — only 27.94% of tickets are AI-reviewed, despite Spam/Scam (347K tickets, Low severity) being an ideal automation target.
-- 🚩 **One team lead is a clear outlier** — Abigail Shaffer's team runs at 87.16s avg handling time (vs. ~54s everywhere else) *and* has the lowest accuracy across all four severity levels — slow **and** inaccurate, not a speed/quality tradeoff.
-- ⚖️ **Uneven workload** — Matthew Moore processed 2.9K tickets vs. a ~1.5K norm — worth an accuracy audit before treating it as a positive outlier.
-- 📉 **Volume anomaly** — February 2026 drops to 76.6K tickets against an 82K–85K baseline — the sharpest deviation in the 12-month trend.
-- ⚠️ **Overturn rate by category** is the cleanest signal of policy inconsistency in the dataset — more useful than a single moderator's accuracy score.
-- 🕐 **Shift timing isn't a quality driver** — accuracy is flat across Morning/Evening/Night (84% / 84% / 83%).
+- 🤖 **Automation already handles a significant share of workload** — 277K of 993K cases are classified as automation cases, representing approximately **27.9%** of total moderation volume. Human moderation still accounts for 716K cases, indicating substantial ongoing workforce dependency.
+
+- 📊 **Moderation workload is concentrated in a few policy categories** — Spam/Scam accounts for approximately **347K cases**, followed by Harassment/Bullying at **248K**. These two categories represent the largest share of overall moderation workload and should be closely monitored for capacity and process optimization.
+
+- 🚩 **Moderator performance varies significantly** — the Moderator Performance page identifies meaningful differences in workload and quality across moderators and team leads. The lowest-performing team leads by accuracy should be investigated further before making workforce or coaching decisions.
+
+- ⚖️ **High workload does not automatically indicate high performance** — Matthew Moore handled approximately **2.9K cases**, substantially above the ~1.5K cases handled by many other moderators. His individual drill-through shows **80.4% accuracy**, highlighting the importance of evaluating productivity together with quality.
+
+- ⚠️ **Hate Speech is the strongest policy-risk signal** — Hate Speech has an **8.02% overall appeal rate context** and, more importantly, an **approximately 34.9% appeal overturn rate**, substantially higher than the ~14.6%–15.2% range observed across the other major policy categories. This indicates potential policy interpretation or decision-consistency issues.
+
+- 📈 **Overall moderation quality remains below a perfect decision-accuracy benchmark** — the dashboard reports approximately **83.4% overall accuracy**, meaning there is a meaningful opportunity to improve decision consistency through calibration, coaching, and QA.
+
+- 🏷️ **Case severity is heavily concentrated in High and Medium categories** — approximately **298K High-severity** and **248K Medium-severity** cases are processed, while Critical cases account for approximately **100K** cases. This makes High/Medium-severity workflows important areas for operational monitoring.
+
+- 🕐 **Handling efficiency should be evaluated alongside quality** — overall Average Handling Time is approximately **55.7 seconds**. The Moderator Accuracy vs AHT analysis provides a way to identify moderators who are simultaneously slow and inaccurate versus those who achieve high quality at efficient handling times.
 
 ---
 
 ## ✅ Recommendations
 
-**Immediate**
-1. Calibration review for Abigail Shaffer's team using the drill-through page to isolate whether the gap is category-specific or broad.
-2. QA sample audit of Matthew Moore's decisions before treating his ticket volume as a positive signal.
-3. Investigate the February 2026 volume drop with the reporting/ingestion owner.
+### Immediate
 
-**Near-term**
-4. Expand AI-automation rules within Spam/Scam and other Low-severity categories, monitored against QA pass rate.
-5. Use the overturn-rate-by-category ranking to prioritize policy clarification sessions.
-6. Set a standing monthly review of the Team & Operations heatmap.
+1. **Prioritize Hate Speech policy calibration** because its **34.9% overturn rate** is materially higher than other policy categories. Review ambiguous policy definitions, common decision errors, and escalation guidance.
 
-**Ongoing**
-7. Track tickets/moderator alongside accuracy — never in isolation.
-8. Make the drill-through page the default first step in every coaching conversation.
+2. **Investigate low-accuracy teams and moderators** using the Moderator Performance page and individual drill-through page to determine whether performance gaps are concentrated in specific policy categories or severity levels.
 
----
+3. **Review high-volume moderators together with quality metrics** rather than treating ticket volume as a standalone productivity indicator. Matthew Moore is a good example: high workload should be evaluated alongside his **80.4% accuracy**.
+
+### Near-term
+
+4. **Target coaching using the Accuracy vs AHT analysis**:
+   - Low accuracy + high AHT → priority coaching
+   - Low accuracy + low AHT → quality-risk investigation
+   - High accuracy + high AHT → productivity improvement
+   - High accuracy + low AHT → potential best-practice benchmark
+
+5. **Review the highest-volume policy categories**, particularly Spam/Scam and Harassment/Bullying, for opportunities to improve workflow efficiency, automation coverage, and policy clarity.
+
+6. **Evaluate automation opportunities carefully** using both workload and quality metrics. The current dataset shows **277K automation cases (~27.9%)**, so future automation expansion should be supported by QA/error monitoring rather than volume alone.
+
+### Ongoing
+
+7. **Monitor Appeal Overturn Rate by Policy Category** as a recurring policy-quality KPI, with particular attention to categories significantly above the overall benchmark.
+
+8. **Track productivity and quality together** — Cases/Moderator, AHT, Accuracy, Appeals, and Overturn Rate should be evaluated as a combined performance framework.
+
+9. **Use the moderator drill-through during coaching conversations** to move from an overall performance signal to the specific categories, months, and severity levels contributing to the issue.
+
+10. **Maintain a monthly executive review** covering workload, human vs automation mix, accuracy, AHT, escalation, appeals, and policy overturn trends.
 
 ## 📁 Repository Structure
 
