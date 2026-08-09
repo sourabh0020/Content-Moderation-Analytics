@@ -162,6 +162,7 @@ Key metrics include:
 - Cases by Violation Category
 - Monthly Cases Trend by Moderator Type (AI vs. human)
 
+![Executive Overview](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Executive%20Dashboard.png)
 **Dashboard image:** https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Executive%20Dashboard.png
 
 > **993K** total cases · **716K** human cases (72%) · **277K** automation cases (27.9%) · **83.4%** accuracy · **55.7 sec** avg handling time · **15.3%** escalation rate
@@ -179,6 +180,7 @@ Key analysis includes:
 - Cases by Shift
 - Lowest-performing Team Leads by Accuracy
 
+![Moderator Performance](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Mods%20Performance.png)
 **Dashboard image:** https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Mods%20Performance.png
 
 > **716K** human-moderated cases · **500** active moderators · **1.43K** cases/moderator avg · **83.4%** accuracy · **55.7 sec** avg AHT · Night shift carries the largest share (34.79%), ahead of Evening (32.8%) and Morning (32.41%)
@@ -195,6 +197,7 @@ Key metrics and analysis include:
 - Action Distribution by Policy Category
 - Policy Appeal & Overturn Details table
 
+![Quality, Risk & Policy](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Quality%2Crisk%20perfromance.png)
 **Dashboard image:** https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Quality%2Crisk%20perfromance.png
 
 > **83.45%** accuracy · **80K** total appeals (**8.02%** appeal rate) · **17.99%** overturn rate · **15.3%** escalation rate · **1.44%** audit coverage
@@ -210,6 +213,7 @@ Right-click any moderator on the Top 15 list to open their scorecard:
 - Accuracy by Violation Category
 - Cases by Severity Level and Month
 
+![Moderator Drill-Through](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Mod%20detailed%20drill%20through%20page.png)
 **Dashboard image:** https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Mod%20detailed%20drill%20through%20page.png
 
 > Example — moderator **Matthew Moore**: **2,869** total cases · **80.4%** accuracy · **53.9 sec** avg AHT · **9.06%** appeal rate · **19.23%** overturn rate · **390** critical-severity cases
