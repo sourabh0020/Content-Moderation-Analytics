@@ -143,7 +143,7 @@ A 4-page Power BI report built for **three different audiences**, plus a drill-t
 ### 1️⃣ Overview — Leadership View
 KPIs, category/severity breakdown, monthly trend, action-taken mix.
 
-![Overview Dashboard](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Executive%20Overview.png)
+![Overview Dashboard](https://github.com/sourabh0020/Content-Moderation-Analytics/blob/main/Dashboard/Executive%20Dashboard.png)
 
 > **993K** total tickets · **40.12s** avg handling time · **83.45%** accuracy · **8.02%** appeal rate · **27.94%** AI automation · **10.08%** Critical cases
 
